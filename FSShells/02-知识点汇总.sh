@@ -6,7 +6,7 @@
 #  Created by 付森 on 2021/3/29.
 #  
 
-# 1.接收一个终端命令的返回值 注意:=两边不能带有空格
+# 1.接收一个终端命令的返回值--方法一   注意:=两边不能带有空格
 # eg:获取当前mac中xcode对应的iOS sdk版本
 sdk_version=`xcodebuild -version -sdk iphoneos SDKVersion`
 echo "sdk版本=${sdk_version}"
@@ -25,5 +25,9 @@ SELECT sqlcipher_export ('encrypt');
 DETACH DATABASE encrypt;
 .q
 EOF
+
+# 4.接收一个命令的返回值--方法二
+sdk_version=$(xcodebuild -version -sdk iphoneos SDKVersion)
+echo "sdk版本=${sdk_version}"
 
 
