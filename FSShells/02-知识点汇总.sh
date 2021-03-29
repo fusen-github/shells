@@ -18,6 +18,7 @@ echo "路径=${pwd_path}"
 
 # 3.进入交互指令界面
 # eg:数据库加密指令，打开数据库 (<< EOF 进入交互式程序. 注意 << 和EOF中间有空格)
+# 在交互指令中可以执行多条命令
 sqlcipher ${filePath} << EOF
 ATTACH DATABASE "${newPath}" AS encrypt KEY "${password}";
 SELECT sqlcipher_export ('encrypt');
