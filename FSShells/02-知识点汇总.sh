@@ -12,7 +12,7 @@ sdk_version=`xcodebuild -version -sdk iphoneos SDKVersion`
 echo "sdk版本=${sdk_version}"
 
 
-# 2.获取当前shell文件的目录
+# 2.获取当前shell文件的全路径
 pwd_path=$(pwd)
 echo "路径=${pwd_path}"
 
